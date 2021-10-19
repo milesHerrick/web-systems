@@ -1,0 +1,38 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar li{
+    float: left;
+}
+
+li a{
+    border-right: 1px solid rgb(189, 187, 187);
+    border-bottom: 1px solid rgb(189, 187, 187);
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    font-weight: bold;
+    color: red;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+}
+
+li a:hover{
+    background-color: rgb(189, 187, 187);
+}
+
+
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+}
