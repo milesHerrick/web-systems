@@ -79,20 +79,19 @@ li a:hover{
   overflow: hidden;
 }
   
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  font-size: larger;
-  color: red;
-  padding: 20px 20px 20px 20px;
-  font-weight: bold;
-  margin: 0;
-  background-color: white;
-  border-right: 1px solid rgb(189, 187, 187);
-  border-bottom: 1px solid rgb(189, 187, 187);
-  border-top: 1px solid rgb(189, 187, 187);
-}
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    font-size: larger;
+    color: red;
+    padding: 20px 20px 20px 20px;
+    font-weight: bold;
+    margin: 0;
+    background-color: white;
+    border-right: 1px solid rgb(189, 187, 187);
+    border-bottom: 1px solid rgb(189, 187, 187);
+    border-top: 1px solid rgb(189, 187, 187);
+  }
   
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: rgb(252, 172, 172);

@@ -2,4 +2,31 @@
 li a:hover{
     background-color: rgb(189, 187, 187);
 }
-
+.times{
+    float: right;
+    text-align: center;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 10px;
+    color: red;
+}
+.cinfo{
+    float: right;
+    text-align: center;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    color: red;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+.text{
+    margin-top: 20%;
+    font-weight: bold;
+}
