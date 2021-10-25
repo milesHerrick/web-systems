@@ -1,17 +1,17 @@
-#flexbox{
-    height: 100%;
+.flexbox{
+    height: 88%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 12%;
 }
 
-#container{
+.container{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 80%;
     margin-top: 5em;
