@@ -1,111 +1,132 @@
 .navbar{
-    position: relative;
-    width: 100%;
-    top: 0%;
-    left: 0%;
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  position: relative;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .navbar li{
-    float: left;
+  float: left;
 }
+
 .header{
-    position: fixed;
-    width: 100%;
-    top: 0%;
-    left: 0%;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  left: 0%;
 }
+
 .logo{
-    font-weight: bold;
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin: 0px;
+  text-align: center;
+}
+
+.space {
+  height: 3.9em;
+  border-right: 1px solid rgb(189, 187, 187);
+  border-bottom: 1px solid rgb(189, 187, 187);
+  border-top: 1px solid rgb(189, 187, 187);
+  width: 30.5em;
+}
+
+.star {
+  align-items: flex-end;
+  padding: 0px !important;
+  border-bottom: 1px solid rgb(189, 187, 187);
+  border-top: 1px solid rgb(189, 187, 187);
+  height: 3.9em;
 }
 
 li a{
-    border-right: 1px solid rgb(189, 187, 187);
-    border-bottom: 1px solid rgb(189, 187, 187);
-    border-top: 1px solid rgb(189, 187, 187);
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    font-weight: bold;
-    color: red;
-    padding: 20px 20px 20px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: larger;
+  border-right: 1px solid rgb(189, 187, 187);
+  border-bottom: 1px solid rgb(189, 187, 187);
+  border-top: 1px solid rgb(189, 187, 187);
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  font-weight: bold;
+  color: red;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: larger;
 }
 
 li a:hover{
-    background-color: rgb(189, 187, 187);
+  background-color: rgb(189, 187, 187);
 }
 
-
-
 .overlay {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown {
-    float: left;
-    overflow: hidden;
-  }
+  float: left;
+  overflow: hidden;
+}
   
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    font-size: larger;
-    color: red;
-    padding: 20px 20px 20px 20px;
-    font-weight: bold;
-    margin: 0;
-    background-color: white;
-    border-right: 1px solid rgb(189, 187, 187);
-    border-bottom: 1px solid rgb(189, 187, 187);
-    border-top: 1px solid rgb(189, 187, 187);
-  }
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  font-size: larger;
+  color: red;
+  padding: 20px 20px 20px 20px;
+  font-weight: bold;
+  margin: 0;
+  background-color: white;
+  border-right: 1px solid rgb(189, 187, 187);
+  border-bottom: 1px solid rgb(189, 187, 187);
+  border-top: 1px solid rgb(189, 187, 187);
+}
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(252, 172, 172);
-  }
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(252, 172, 172);
+}
   
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
   
-  .dropdown-content a {
-    float: none;
-    color: red;
-    padding: 12px 16px;
-    display: block;
-    text-align: left;
-  }
+.dropdown-content a {
+  float: none;
+  color: red;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
   
-  .dropdown-content a:hover {
-    background-color: rgb(252, 172, 172);
-  }
+.dropdown-content a:hover {
+  background-color: rgb(252, 172, 172);
+}
   
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  .footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid rgb(189, 187, 187);
-    display: flex;
-    justify-content: space-around;
-    font-size: large;
-    color: red;
-  }
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgb(189, 187, 187);
+  display: flex;
+  justify-content: space-around;
+  font-size: large;
+  color: red;
+}
