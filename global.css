@@ -7,7 +7,6 @@ body {
   width: 100%;
   top: 0%;
   left: 0%;
-  background-color: white;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -17,11 +16,25 @@ body {
   float: left;
 }
 
+.navright{
+  position: relative;
+  width: 100%;
+  top: 0%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navright li{
+  float: right;
+}
+
 .header{
   position: fixed;
   width: 100%;
   top: 0%;
   left: 0%;
+  box-shadow: 0px 0px 0px 2px rgb(189, 187, 187);
 }
 
 .logo{
@@ -37,24 +50,20 @@ body {
 
 .space {
   height: 3.9em;
-  border-right: 1px solid rgb(189, 187, 187);
-  border-bottom: 1px solid rgb(189, 187, 187);
   border-top: 1px solid rgb(189, 187, 187);
-  width: 28em;
 }
 
 .star {
   align-items: flex-end;
   padding: 0px !important;
-  border-bottom: 1px solid rgb(189, 187, 187);
   border-top: 1px solid rgb(189, 187, 187);
+  border-left: 1px solid rgb(189, 187, 187);
   height: 3.9em;
   width: 6.25em;
 }
 
 li a{
   border-right: 1px solid rgb(189, 187, 187);
-  border-bottom: 1px solid rgb(189, 187, 187);
   border-top: 1px solid rgb(189, 187, 187);
   font-family: Arial, Helvetica, sans-serif;
   display: block;
@@ -89,7 +98,6 @@ li a:hover{
     font-weight: bold;
     margin: 0;
     border-right: 1px solid rgb(189, 187, 187);
-    border-bottom: 1px solid rgb(189, 187, 187);
     border-top: 1px solid rgb(189, 187, 187);
     background-color: #faf0e6;
   }
