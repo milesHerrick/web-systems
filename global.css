@@ -57,7 +57,6 @@ li a:hover{
   .dropdown .dropbtn {
     font-size: 16px;  
     border: none;
-    outline: none;
     font-size: larger;
     color: red;
     padding: 20px 20px 20px 20px;
