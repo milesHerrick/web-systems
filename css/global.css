@@ -187,4 +187,8 @@ a:active {
   .textcontainer{
     flex-direction: column;
   }
+  
+  .prereviews {
+    flex-direction: column;
+  }
 }
