@@ -19,7 +19,7 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     color: red;
 }
-p{
+.description{
     font-family: 'Times New Roman', Times, serif;
-    color: red;
+    color: black;
 }
