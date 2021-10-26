@@ -2,3 +2,92 @@
 li a:hover{
     background-color: rgb(189, 187, 187);
 }
+
+.flexbox{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    width: 30vw;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+form{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+input[type=text]{
+    
+    border-radius: 5px;
+    background-color: #e3b39b;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+input[type=email]{
+    border-radius: 5px;
+    background-color: #e3b39b;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+input[type=tel]{
+    border-radius: 5px;
+    background-color: #e3b39b;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    background-color: #e3b39b;
+    border: 2px solid black;
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+input[type=submit]{
+    font-size: large;
+    border-radius: 5px;
+    background-color: #e3b39b;
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 10px;
+}
+#image{
+    padding-bottom: 1%;
+    height: 30vh;
+    width: 100vw;
+}
+img{
+    border: 2px solid black;
+    border-radius: 0% !important;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 40%;
+}
+::placeholder{
+    color:black;
+}

@@ -7,11 +7,16 @@
 }
 
 .container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 60vh;
     width: 30vw;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 form{
@@ -58,6 +63,7 @@ input[type=submit]{
     margin: 10px;
 }
 #image{
+    padding-bottom: 1%;
     height: 30vh;
     width: 100vw;
 }
