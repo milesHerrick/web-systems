@@ -142,3 +142,8 @@ li a:hover{
   font-size: large;
   color: red;
 }
+
+img {
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px black;
+}
