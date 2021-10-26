@@ -65,7 +65,7 @@ input[type=submit]{
 #image{
     padding-bottom: 1%;
     height: 30vh;
-    width: 100vw;
+    width: 50vw;
 }
 img{
     border-bottom: 2px solid black;

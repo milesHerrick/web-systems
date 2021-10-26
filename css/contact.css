@@ -46,14 +46,12 @@ p {
     text-align: center;
 }
 
-img {
-    width: 100%;
-}
-
 #image{
     padding-bottom: 1%;
-    height: 30vh;
-    width: 100vw;
+    height: 35vh;
+    width: 50vw;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 img{
     border-bottom: 2px solid black;
