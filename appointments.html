@@ -59,7 +59,17 @@
                 <input type="text" id="model" name="model" placeholder="Model">
                 <input type="text" id="vin" name="vin" placeholder="VIN">
                 <h3>Appointment Type</h3>
-                <input type="submit" id=submit name="submit">
+                <div id="selection">
+                    <input type="radio" id="phonecall" name="phonecall" value="phonecall">
+                    <label for="phonecall">Phone Call</label>
+                    <input type="radio" id="radtext" name="radtext" value="radtext">
+                    <label for="radtext">Text </label>
+                    <input type="radio" id="rademail" name="rademail" value="rademail">
+                    <label for="rademail">Email </label>
+                </div>
+
+                
+                <input type="submit" id=submit name="submit" >
                 
             </form> 
         </div>
