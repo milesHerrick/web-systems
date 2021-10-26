@@ -161,3 +161,12 @@ img {
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px rgb(189, 187, 187);
 }
+
+input{
+  box-shadow: 2px 2px 2px 2px rgb(189, 187, 187);
+}
+
+textarea{
+  box-shadow: 2px 2px 2px 2px rgb(189, 187, 187);
+
+}
