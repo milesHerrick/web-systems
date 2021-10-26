@@ -44,9 +44,8 @@ body {
   text-align: center;
 }
 
-p {
+.logo {
   margin: 0px;
-  text-align: left;
 }
 
 .space {
