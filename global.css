@@ -1,5 +1,6 @@
 body {
   background-color: #faf0e6;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .navbar{
@@ -145,5 +146,5 @@ li a:hover{
 
 img {
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 2px black;
+  box-shadow: 2px 2px 2px 2px rgb(189, 187, 187);
 }
