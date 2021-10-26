@@ -170,3 +170,19 @@ textarea{
   box-shadow: 2px 2px 2px 2px rgb(189, 187, 187);
 
 }
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #faf0e6;;
+}
+
+a:active {
+  color: black;
+}
