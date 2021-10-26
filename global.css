@@ -26,7 +26,7 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  background-color: #e3b39b;
+  background-color: white;
 }
 
 .navright li{
@@ -65,10 +65,11 @@ body {
   align-items: flex-end;
   padding: 0px !important;
   border-top: 1px solid rgb(189, 187, 187);
-  border-left: 1px solid rgb(189, 187, 187);
-  height: 100%;
+  border-left: 1px solid black;
+  height: 3.8em;
   width: 6.25em;
   margin: none;
+  background-color: white !important;
 }
 
 li a{
