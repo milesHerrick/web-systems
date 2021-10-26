@@ -79,11 +79,7 @@ input[type=submit]{
 input[type=radio]{
     box-shadow: none;
 }
-#image{
-    padding-bottom: 1%;
-    height: 30vh;
-    width: 100vw;
-}
+
 select{
     border: 2px solid black;
     box-sizing: content-box;
@@ -108,7 +104,11 @@ input[type=time]{
     width: 100%;
 }
 
-
+#image{
+    padding-bottom: 1%;
+    height: 30vh;
+    width: 100vw;
+}
 img{
     border-bottom: 2px solid black;
     border-radius: 0% !important;
