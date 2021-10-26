@@ -109,6 +109,11 @@
     height: 100%;
     font-size: xx-large;
     text-shadow: 2px 2px 0px black;
+    background-color: #e3b39b;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(189, 187, 187);
+
 }
 .reviewtext{
     color: black;
