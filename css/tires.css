@@ -27,8 +27,10 @@
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgb(189, 187, 187);
     padding: 1em;
-    font-size: 1.25em;
     margin: 2%;
+}
+.description{
+    font-size: larger;
 }
 h1 {
     text-align: center;
