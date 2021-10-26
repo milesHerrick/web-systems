@@ -67,3 +67,14 @@ img{
 ul{
     list-style-type: none;
 }
+
+@media(max-width: 1000px){
+    .textbox{
+        flex: 1 0 37%;
+        margin: 10px;
+        max-width:45%;
+        font-size: smaller;
+        
+    }
+
+}
