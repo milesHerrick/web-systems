@@ -59,17 +59,21 @@
                 <input type="text" id="model" name="model" placeholder="Model">
                 <input type="text" id="vin" name="vin" placeholder="VIN">
                 <h3>Appointment Type</h3>
-                <div id="selection">
-                    <input type="radio" id="phonecall" name="phonecall" value="phonecall">
-                    <label for="phonecall">Phone Call</label>
-                    <input type="radio" id="radtext" name="radtext" value="radtext">
-                    <label for="radtext">Text </label>
-                    <input type="radio" id="rademail" name="rademail" value="rademail">
-                    <label for="rademail">Email </label>
-                </div>
-
+                <select name="apttype" id="apttype">
+                    <option value="oilchange">Oil Change</option>
+                    <option value="breakjob">Break Job</option>
+                    <option value="tirechange">Tire Change</option>
+                    <option value="diagnostic">Diagnostic Appointment</option>
+                    <option value="alignment">Tire Alignment</option>
+                </select>
+                <h3>Select Time and Date</h3>
+                <input type="date" id="date" name="date">
+                <input type="time" id="time" name="time">
+                <h3>Requests/Comments</h3>
+                <textarea id="textbox" name="textbox" rows="5" cols="50" placeholder="Type any Requests or Comments here"></textarea>
+                <input type="submit" id=submit name="submit">
                 
-                <input type="submit" id=submit name="submit" >
+
                 
             </form> 
         </div>
