@@ -4,7 +4,7 @@
     height: 50px;
     line-height: 50px;
     font-size: 50px;
-    margin-top: 10%;
+    margin-top: 1%;
   }
   
   .rating label {
@@ -98,8 +98,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+  
 }
 .preicon{
+  border: 2px solid black;
+  background-color: #e3b39b;
+  height: 40vh;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(189, 187, 187);
+  padding: 1em;
+  font-size: 1.75em;
+  margin-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,4 +129,18 @@
     color: black;
     font-size: medium;
     text-shadow: none;
+}
+
+#image{
+  padding-bottom: 1%;
+  height: 30vh;
+  width: 100vw;
+}
+img{
+  border-bottom: 2px solid black;
+  border-radius: 0% !important;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 25%;
 }
