@@ -184,9 +184,7 @@ a:active {
 }
 
 @media(max-width: 1000px){
-  .textbox{
-      margin: 10px;
-      font-size: smaller;
-      
+  .textcontainer{
+    flex-direction: column;
   }
 }
