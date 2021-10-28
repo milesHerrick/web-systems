@@ -64,7 +64,6 @@ body {
   padding: 2px !important;
   height: 100%;
   width: 6.25em;
-  margin: none;
   background-color: white !important;
 }
 
@@ -191,5 +190,43 @@ a:active {
   
   .prereviews {
     flex-direction: column;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    border-right: 0;
+  }
+  .navbar li{
+    display: flex;
+    justify-content: center;
+  }
+  .navright li{
+    float: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .navright{
+    display: flex;
+    justify-content: center;
+  }
+  .space{
+    height: 0px;
   }
 }
