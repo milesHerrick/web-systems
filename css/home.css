@@ -16,17 +16,20 @@
 
 .textcontainer {
     display: flex;
-
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-evenly;
 }
 
 .textbox {
     border: 2px solid black;
-    width: 50vw;
+    width: 40vw;
     background-color: #e3b39b;
     height: 40vh;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgb(189, 187, 187);
     padding: 1em;
+    margin: 1em;
     margin-bottom: 2em;
     display: flex;
     flex-direction: column;
