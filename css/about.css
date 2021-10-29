@@ -67,19 +67,3 @@ img{
 ul{
     list-style-type: none;
 }
-
-@media(max-width: 1000px){
-    .textcontainer{
-        width: 90%;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .textbox{
-        width: 100%;
-        margin-left: 0;
-        height: 50vh;
-    }
-}

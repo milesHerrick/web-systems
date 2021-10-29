@@ -67,8 +67,3 @@ img{
     object-fit: cover;
     object-position: 0% 25%;
 }
-@media(max-width: 1000px){
-    .textbox{
-        height: 50vh;
-    }
-}

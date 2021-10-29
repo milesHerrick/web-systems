@@ -238,6 +238,10 @@ a:active {
 }
 .textbox{
     width: 100%;
+    height: 55%;
     margin-left: 0;
+}
+.flexbox{
+  height: 110vh;
 }
 }
