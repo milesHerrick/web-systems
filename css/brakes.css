@@ -50,3 +50,8 @@ img{
 h1{
     text-align: center;
 }
+@media(max-width: 1000px){
+    .textbox{
+        height: 50vh;
+    }
+}

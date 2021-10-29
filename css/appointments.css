@@ -120,3 +120,14 @@ img{
 ::placeholder{
     color:black;
 }
+@media(max-width: 1000px){
+    .container{
+        width: 90%;
+    }
+    input[type], textarea{
+        width: 75%;
+    }
+    #apttype{
+        width: 75%;
+    }
+}

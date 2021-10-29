@@ -69,12 +69,17 @@ ul{
 }
 
 @media(max-width: 1000px){
-    .textbox{
-        flex: 1 0 37%;
-        margin: 10px;
-        max-width:45%;
-        font-size: smaller;
-        
+    .textcontainer{
+        width: 90%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
+    .textbox{
+        width: 100%;
+        margin-left: 0;
+        height: 50vh;
+    }
 }

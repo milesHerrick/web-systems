@@ -69,7 +69,6 @@ body {
 
 li a{
   border-right: 1px solid black;
-  
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   font-weight: bold;
@@ -205,16 +204,16 @@ a:active {
     justify-content: center;
     align-items: center;
   }
-  .li{
+  .li a{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: small;
-    border-right: 0;
   }
   .navbar li{
     display: flex;
     justify-content: center;
+    border-right: 0px;
   }
   .navright li{
     float: none;
@@ -229,4 +228,16 @@ a:active {
   .space{
     height: 0px;
   }
+  .textcontainer{
+    width: 90%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.textbox{
+    width: 100%;
+    margin-left: 0;
+}
 }
