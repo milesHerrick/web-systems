@@ -68,7 +68,6 @@ body {
 }
 
 li a{
-  border-right: 1px solid black;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   font-weight: bold;
@@ -94,21 +93,19 @@ li a:hover{
   overflow: hidden;
 }
   
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    font-size: larger;
-    color: black;
-    padding: 20px 20px 20px 20px;
-    font-weight: bold;
-    margin: 0;
-    border-right: 1px solid black;
-    
-    background-color: #e3b39b;
-  }
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  font-size: larger;
+  color: black;
+  padding: 20px 20px 20px 20px;
+  font-weight: bold;
+  margin: 0;
+  background-color: #e3b39b;
+}
   
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #f8c7af;
+  background-color: #f8c7af;
 }
   
 .dropdown-content {
@@ -182,7 +179,7 @@ a:active {
   color: black;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1047px){
   .textcontainer{
     flex-direction: column;
   }
@@ -200,9 +197,11 @@ a:active {
   }
   .navbar{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    font-size: .65em;
   }
   .li a{
     display: flex;
@@ -213,7 +212,6 @@ a:active {
   .navbar li{
     display: flex;
     justify-content: center;
-    border-right: 0px;
   }
   .navright li{
     float: none;
@@ -235,13 +233,13 @@ a:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.textbox{
-    width: 100%;
-    height: 55%;
-    margin-left: 0;
-}
-.flexbox{
-  height: 110vh;
-}
+  }
+  .textbox{
+      width: 100%;
+      height: 55%;
+      margin-left: 0;
+  }
+  .flexbox{
+    height: 110vh;
+  }
 }
