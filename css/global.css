@@ -64,13 +64,10 @@ body {
   padding: 2px !important;
   height: 100%;
   width: 6.25em;
-  margin: none;
   background-color: white !important;
 }
 
 li a{
-  border-right: 1px solid black;
-  
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   font-weight: bold;
@@ -96,21 +93,19 @@ li a:hover{
   overflow: hidden;
 }
   
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    font-size: larger;
-    color: black;
-    padding: 20px 20px 20px 20px;
-    font-weight: bold;
-    margin: 0;
-    border-right: 1px solid black;
-    
-    background-color: #e3b39b;
-  }
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  font-size: larger;
+  color: black;
+  padding: 20px 20px 20px 20px;
+  font-weight: bold;
+  margin: 0;
+  background-color: #e3b39b;
+}
   
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #f8c7af;
+  background-color: #f8c7af;
 }
   
 .dropdown-content {
@@ -184,12 +179,67 @@ a:active {
   color: black;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1047px){
   .textcontainer{
     flex-direction: column;
   }
   
   .prereviews {
     flex-direction: column;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: .65em;
+  }
+  .li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+  }
+  .navbar li{
+    display: flex;
+    justify-content: center;
+  }
+  .navright li{
+    float: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .navright{
+    display: flex;
+    justify-content: center;
+  }
+  .space{
+    height: 0px;
+  }
+  .textcontainer{
+    width: 90%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .textbox{
+      width: 100%;
+      height: 55%;
+      margin-left: 0;
+  }
+  .flexbox{
+    height: 110vh;
   }
 }
