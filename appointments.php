@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="css/appointments.css"/>
-    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/global.php"/>
     <link rel="shortcut icon" type="image/png" href="images/carfavicon.png"/>
+    <script defer src="js/permissions.js"></script>
 </head>
 <body>
+    <?php session_start() ?>
     <div class="header">
         
         <ul class="navbar">
             <li><a href="home.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="appointments.php">Appointments</a></li>
             <li>
                 <div class="dropdown">
                     <button class="dropbtn">Advice 
@@ -32,6 +34,9 @@
             <li><a href="ask.html">Ask</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li class="signuppage" id="signuppage"><a href="signup.php">Sign Up</a></li>
+            <li class="loginpage" id="loginpage"><a href="login.php">Sign In</a></li>
+            <li id="logout"><a>Sign Out</a></li>
             <li class="space"></li>
         </ul>
         <ul class="navright">

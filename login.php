@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="stylesheet" href="css/signup.css"/>
-    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/global.php"/>
     <link rel="shortcut icon" type="image/png" href="images/carfavicon.png"/>
+    <script defer src="js/permissions.js"></script>
 </head>
 <body>
+    <?php session_start() ?>
     <div class="header">
         <ul class="navbar">
             <!-- <p class="logo">Hallis</p>
@@ -34,8 +36,9 @@
             <li><a href="ask.html">Ask</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="login.php">Sign In</a></li>
+            <li class="signuppage" id="signuppage"><a href="signup.php">Sign Up</a></li>
+            <li class="loginpage" id="loginpage"><a href="login.php">Sign In</a></li>
+            <li id="logout"><a>Sign Out</a></li>
             <li class="space"></li>
         </ul>
         <ul class="navright">
@@ -64,8 +67,14 @@
     <?php
         require_once('sql_conn.php');
         //If a submit request has been entered, enter the data into the table
+        if (!empty($_POST["logout"])) {
+            $_SESSION['user_level'] = 'none';   
+            //echo '<script>alert("Entered an incorrect email or password.")</script>';
+        }
+
         if(isset($_GET['submit'])){
             // Check connection
+            echo '<script>alert("Entered an incorrect email or password.")</script>';
             if($dbc === false){
 
                 die("ERROR: Could not connect. " 
@@ -75,18 +84,42 @@
             $email = $_GET['email'];
             $password = $_GET['password'];
             
+
+            
+            
             //$result = $dbc->query("SELECT email FROM accounts WHERE email = $email");
 
             $result = $dbc->query("SELECT email, password FROM accounts WHERE email = '$email' AND password = '$password'");
+            $aresult = $dbc->query("SELECT user FROM admin WHERE user = '$email' AND password = '$password'");
 
-            if($result->num_rows == 0) {
+            
+            if($aresult->num_rows != 0) {
+                echo "<script> setPerms('admin'); </script>";
+                echo '<script>alert("Admin account.")</script>';
+                $_SESSION['user_level'] = 'admin';
+                //Log in to admin permissions
+                
+            }
+            else if($result->num_rows == 0) {
                 echo '<script>alert("Entered an incorrect email or password.")</script>';
             }
             else if (empty ($email) || empty($password)){   
                 echo '<script>alert("There was an issue with your submission. Please make sure both fields are filled out.")</script>';
                 //echo '<script>alert($stars)</script>';  
             }else{
-                echo '<script>alert("Successful sign in.")</script>'; 
+                $_SESSION['user_level'] = 'user';
+                $value = "none";
+                header("Location: /web-systems/home.html");
+                /*echo '<script type="text/javascript">
+                for(let i = 0; i < document.getElementsByClassName("loginpage").length; i++){
+                    document.getElementsByClassName("loginpage").style[i] = "display: none;"
+                }
+                </script>';*/
+                //echo "<script> document.getElementByClassName('signuppage').style.visibility = 'hidden'; </script>";
+                
+                //Log in to regular user permissions
+                
+                
                 //Inserts the data into the table
                 //$sql = "INSERT INTO accounts (email, password)  VALUES ('$email', '$password')";
                 
