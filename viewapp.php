@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/signup.css"/>
+    <link rel="stylesheet" href="css/viewapp.css"/>
     <link rel="stylesheet" href="css/global.php"/>
     <link rel="shortcut icon" type="image/png" href="images/carfavicon.png"/>
     <script defer src="js/permissions.js"></script>
+    <!-- Add ability to sort by date -->
 </head>
 <body>
     <?php session_start() ?>
@@ -52,8 +53,7 @@
     </div>
     <div class="input">
         <form action="" method="post">
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input type="text" id="password" name="password" placeholder="Password">
+            <input type="date" id="date" name="date" value="2021-12-07">
             <input type="submit" name="submit">
         </form>
     </div>
@@ -67,40 +67,66 @@
 
     <?php
         require_once('sql_conn.php');
-        //If a submit request has been entered, enter the data into the table
-        if(isset($_POST['submit'])){
-            // Check connection
-            if($dbc === false){
 
-                die("ERROR: Could not connect. " 
-                    . mysqli_connect_error());
-            }
-            
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            
-            $result = $dbc->query("SELECT email FROM accounts WHERE email = '$email'");
-            if($result->num_rows != 0) {
-                echo '<script>alert("There is already an account with that email.")</script>';
-            }
-            else if (empty ($email) || empty($password)){   
-                echo '<script>alert("There was an issue with your submission. Please make sure both fields are filled out.")</script>';
-                //echo '<script>alert($stars)</script>';  
-            }else{
-                //Inserts the data into the table
-                $sql = "INSERT INTO accounts (email, password)  VALUES ('$email', '$password')";
+        $date = $_GET['date'];
+        $query = "SELECT name, email, phone, date, time, year, make, model, vin, description FROM appointments WHERE date = '$date'";
+
+        // Get a response from the database by sending the connection
+        // and the query
+        $response = @mysqli_query($dbc, $query);
+
+        // If the query executed properly proceed
+        if($response){
+            echo '<table align="left" cellspacing="5" cellpadding="8" head="Flight Info" border = "1" style="border-collapse:collapse">
+                <tr style="background-color:beige">
+                    <th colspan="10" >Appointments</th>
+                </tr>
+                <tr>
+                    <td align="left"><b>Name</b></td>
+                    <td align="left"><b>Email</b></td>
+                    <td align="left"><b>Phone</b></td>
+                    <td align="left"><b>Date</b></td>
+                    <td align="left"><b>Time</b></td>
+                    <td align="left"><b>Year</b></td>
+                    <td align="left"><b>Make</b></td>
+                    <td align="left"><b>Model</b></td>
+                    <td align="left"><b>Vin</b></td>
+                    <td align="left"><b>Description</b></td>
+                </tr>';
+
+            //If a submit request has been entered, enter the data into the table
+            while($row = mysqli_fetch_array($response)){
+
+                echo '<tr><td align="left">' . 
+                $row['name'] . '</td><td align="left">' .
+                $row['email'] . '</td><td align="left">' . 
+                $row['phone'] . '</td><td align="left">' .
+                $row['date'] . '</td><td align="left">' .
+                $row['time'] . '</td><td align="left">' .
+                $row['year'] . '</td><td align="left">' .
+                $row['make'] . '</td><td align="left">' .
+                $row['model'] . '</td><td align="left">' .
+                $row['vin'] . '</td><td align="left">' .
+                $row['description'] . '</td>';
                 
-                if(mysqli_query($dbc, $sql)){
-                    echo '<script>alert("Your account has been created.")</script>'; 
-                } else{
-                    echo '<script>alert("There was an issue with your submission. Could not perform query.")</script>';
+                echo '</tr>';
                 }
-            }
+                
+                echo '</table>
+                <a href="index.php">Return to home page</a> <br>';
+                
+                
+                } else {
+                
+                echo "Couldn't issue database query<br />";
+                
+                echo mysqli_error($dbc);
+                
+                }
+                // Close connection
+                mysqli_close($dbc);
             
-            // Close connection
-            mysqli_close($dbc);
 
-        }
 
 
     ?>
