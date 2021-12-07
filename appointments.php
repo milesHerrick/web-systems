@@ -75,12 +75,11 @@
                 </select>
                 <h3>Select Time and Date</h3>
                 <input type="date" id="date" name="date" value="2021-12-07"  require>
-                <input list="time" require>
+                <input list="time" name="time" require>
                 <datalist id="time" name="time">
                     <option value="9:00 A.M.">
                     <option value="10:00 A.M.">
                     <option value="11:00 A.M.">
-                    <option value="12:00 P.M.">
                     <option value="1:00 P.M.">
                     <option value="2:00 P.M.">
                     <option value="3:00 P.M.">
@@ -126,28 +125,24 @@
             //$sql = "SELECT date FROM appointments WHERE date = $date";
 
             
-            $result = $dbc->query("SELECT date FROM appointments WHERE date = $date");
+            $result = $dbc->query("SELECT date FROM appointments WHERE date = '$date' AND time = '$time'");
             if($result->num_rows != 0) {
-                echo '<script>alert("That date is already booked.")</script>';
+                echo '<script>alert("That date and time is already booked.")</script>';
             } else if (!preg_match ("/^[0-9]*$/", $year) || empty ($name) || empty($email) || empty($phone) || empty($year) ||
             empty($make) || empty($model) || empty($vin) || empty($type) || empty($date) || empty($time) ||
             !preg_match ("/^[a-zA-z]*$/", $name)){   
-                echo '<script>alert("There was an issue with your submission. Please make sure all fields are filled out.")</script>';
-                //echo '<script>alert($stars)</script>';  
+                echo '<script>alert("There was an issue with your submission. Please make sure all fields are filled out.")</script>';  
             }else{
                 //Inserts the data into the table
                 $sql = "INSERT INTO appointments (name, email, phone, year, make, model, vin, type, date, time, description)  VALUES ('$name', 
                     '$email', '$phone', '$year', '$make', '$model', '$vin', '$type', '$date', '$time', '$comment')";
                 
                 if(mysqli_query($dbc, $sql)){
-                    echo '<script>alert("Your review was successfully submitted.")</script>'; 
+                    echo '<script>alert("Your appointment was successfully scheduled.")</script>'; 
                 } else{
                     echo '<script>alert("There was an issue with your submission. Could not perform query.")</script>';
                 }
             }
-
-            
-            
             // Close connection
             mysqli_close($dbc);
 
