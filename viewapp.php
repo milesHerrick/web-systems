@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/viewapp.css"/>
     <link rel="stylesheet" href="css/global.php"/>
+    <link rel="stylesheet" href="css/newstyle.css"/>
     <link rel="shortcut icon" type="image/png" href="images/carfavicon.png"/>
     <script defer src="js/permissions.js"></script>
     <!-- Add ability to sort by date -->
@@ -59,10 +59,10 @@
                     <input type="date" name="date">
                     <input type="submit" name="submit">
                 </form>
-                <form action="" method = "POST">
-                    <label for="time">Enter ID to Delete</label>
-                    <input type="text" name="Id">
-                    <input type="submit" name="submit">
+                <form class="bottom" action="" method = "POST">
+                    <div><label for="time">Enter ID to Delete</label></div>
+                    <div><input type="text" name="Id">
+                    <input type="submit" name="submit"></div>
                 </form>
             </div>
             <?php
