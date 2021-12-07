@@ -108,7 +108,7 @@ li a:hover{
   margin: 0;
   background-color: #e3b39b;
 }
-  
+
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #f8c7af;
 }

@@ -51,13 +51,17 @@
             </li>
         </ul>
     </div>
-    <div class="input">
-        <form action="" method="post">
-            <input type="date" id="date" name="date" value="2021-12-07">
-            <input type="submit" name="submit">
-        </form>
-    </div>
 
+    <div class="flexbox">
+        <div class="container">
+            <div class="input">
+                <form action="" method="post">
+                    <input type="date" id="date" name="date" value="2021-12-07">
+                    <input type="submit" name="submit">
+                </form>
+            </div>       
+        </div>
+    </div>
 
     <div class="footer">
         <p><b>Copyright &copy; 2021 Hallis Auto Repair</b></p>
