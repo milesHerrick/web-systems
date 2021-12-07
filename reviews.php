@@ -52,44 +52,45 @@
             <img src="images/newshop.jpg" alt="The New Shop">
         </div>
         <h2>Write a Review</h2>
-        <form method="post" action="">
-            <div class="rating">
-                <label>
-                <input type="radio" name="stars" value="1" />
-                    <span class="icon">&starf;</span>
-                </label>
-                <label>
-                <input type="radio" name="stars" value="2" />
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                </label>
-                <label>
-                <input type="radio" name="stars" value="3" />
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>   
-                </label>
-                <label>
-                <input type="radio" name="stars" value="4" />
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                </label>
-                <label>
-                <input type="radio" name="stars" value="5" />
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                    <span class="icon">&starf;</span>
-                </label>
-            </div>
-            <textarea name ="review" class="review" placeholder="Enter a review..." rows="4"></textarea>
-            <input type="submit" class="submitbtn" value="Submit" name="submit">
-        </form>
+            <form method="post" action="">
+                <div class="rating">
+                    <label>
+                    <input type="radio" name="stars" value="1" />
+                        <span class="icon">&starf;</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="2" />
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="3" />
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>   
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="4" />
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="5" />
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                        <span class="icon">&starf;</span>
+                    </label>
+                </div>
+                <textarea name ="review" class="review" placeholder="Enter a review..." rows="4"></textarea>
+                <input type="submit" class="submitbtn" value="Submit" name="submit">
+            </form>
         
 
+        
         <div class="prereviews">
 
             <span class="preicon">&starf;&starf;&starf;&starf;&starf;<br>
@@ -100,15 +101,13 @@
             </span>
             
         </div>
-        <p class="elink"><a href="https://tinyurl.com/524rz2kx" target="_blank">See more reviews</a></p>
-    </div>
-    <div class="footer">
-        <p><b>Copyright &copy; 2021 Hallis Auto Repair</b></p>
-        <p><b>Phone:</b> 715-695-2727</p>
-        <p><a href="https://tinyurl.com/2f4u9wfb" target="_blank"><b>Address:</b> 203 5th Ave S, Strum, WI 54770</a></p>
-    </div>
 
-    <?php
+            <form action="" method = "GET">
+                <input type="hidden"> 
+            </form>
+      
+
+        <?php
         require_once('sql_conn.php');
         //If a submit request has been entered, enter the data into the table
         if(isset($_POST['submit'])){
@@ -118,7 +117,7 @@
                 die("ERROR: Could not connect. " 
                     . mysqli_connect_error());
             }
-            
+            error_reporting(E_ERROR | E_PARSE);
             //Grab the three inputted values
             $review = $_REQUEST['review'];
             //Get their lengths for checking valid input
@@ -147,13 +146,47 @@
                     echo '<script>alert("There was an issue with your submission. Could not perform query.")</script>';
                 }
             }
+        
             
             // Close connection
-            mysqli_close($dbc);
-
         }
 
 
+            
+            $query = "SELECT * FROM review";
+            $response = @mysqli_query($dbc, $query);
+            if($response){
+                echo '<div class="tab">
+                <table align="left" cellspacing="5" cellpadding="8" head="Flight Info" border = "1" style="border-collapse:collapse">
+                <tr style="background-color:#e3b39b">
+                    <th colspan="11" >reviews</th>
+                </tr>
+                <tr>
+                    <td align="left"><b>description</b></td>
+                    <td align="left"><b>stars</b></td>
+                </tr>'; 
+                $lengths = mysqli_fetch_lengths($response);
+                while($row = mysqli_fetch_array($response)){
+                    echo
+                    '<tr> 
+                        <td>'. $row['description'] . '</td>
+                        <td align="left">' . $row['stars'] . '</td>'.
+                    '</tr>';
+                } 
+                echo '</table>
+                </div>';
+            }
     ?>
+    
+    </div>
+        
+    
+    <div class="footer">
+        <p><b>Copyright &copy; 2021 Hallis Auto Repair</b></p>
+        <p><b>Phone:</b> 715-695-2727</p>
+        <p><a href="https://tinyurl.com/2f4u9wfb" target="_blank"><b>Address:</b> 203 5th Ave S, Strum, WI 54770</a></p>
+    </div>
+
+    
 </body>
 </html>
