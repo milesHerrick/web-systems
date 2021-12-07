@@ -34,6 +34,7 @@
             <li><a href="ask.html">Ask</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li class="viewapp" id="viewapp"><a href="viewapp.php">View Apps</a></li>
             <li class="signuppage" id="signuppage"><a href="signup.php">Sign Up</a></li>
             <li class="loginpage" id="loginpage"><a href="login.php">Sign In</a></li>
             <li id="logout"><a>Sign Out</a></li>
@@ -73,8 +74,18 @@
                     <option value="alignment">Tire Alignment</option>
                 </select>
                 <h3>Select Time and Date</h3>
-                <input type="date" id="date" name="date">
-                <input type="time" id="time" name="time">
+                <input type="date" id="date" name="date" value="2021-12-07"  require>
+                <input list="time" require>
+                <datalist id="time" name="time">
+                    <option value="9:00 A.M.">
+                    <option value="10:00 A.M.">
+                    <option value="11:00 A.M.">
+                    <option value="12:00 P.M.">
+                    <option value="1:00 P.M.">
+                    <option value="2:00 P.M.">
+                    <option value="3:00 P.M.">
+                    <option value="4:00 P.M.">
+                </datalist>
                 <h3>Requests/Comments</h3>
                 <textarea id="textbox" name="textbox" rows="5" cols="50" placeholder="Type any Requests or Comments here"></textarea>
                 <input type="submit" id=submit name="submit">
@@ -116,7 +127,7 @@
 
             
             $result = $dbc->query("SELECT date FROM appointments WHERE date = $date");
-            if($result->num_rows == 0) {
+            if($result->num_rows != 0) {
                 echo '<script>alert("That date is already booked.")</script>';
             } else if (!preg_match ("/^[0-9]*$/", $year) || empty ($name) || empty($email) || empty($phone) || empty($year) ||
             empty($make) || empty($model) || empty($vin) || empty($type) || empty($date) || empty($time) ||

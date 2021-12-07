@@ -252,9 +252,6 @@ a:active {
   display: none;
 }
 
-.man{
-  display: none;
-}
 
 <?php
 if($_SESSION['user_level'] == 'user') {
@@ -267,6 +264,9 @@ if($_SESSION['user_level'] == 'user') {
 }
 #logout{
   display: initial;
+}
+.viewapp{
+  display: none;
 }
 <?php
 }
@@ -284,6 +284,9 @@ if($_SESSION['user_level'] == 'admin') {
 #logout{
   display: initial;
 }
+.viewapp{
+  display: initial;
+}
 <?php
 }
 ?>
@@ -298,6 +301,9 @@ if($_SESSION['user_level'] == 'none') {
   display: initial;
 }
 #logout{
+  display: none;
+}
+.viewapp{
   display: none;
 }
 <?php

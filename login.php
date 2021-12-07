@@ -36,6 +36,7 @@
             <li><a href="ask.html">Ask</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li class="viewapp" id="viewapp"><a href="viewapp.php">View Apps</a></li>
             <li class="signuppage" id="signuppage"><a href="signup.php">Sign Up</a></li>
             <li class="loginpage" id="loginpage"><a href="login.php">Sign In</a></li>
             <li id="logout"><a>Sign Out</a></li>
@@ -83,7 +84,6 @@
 
         if(isset($_GET['submit'])){
             // Check connection
-            echo '<script>alert("Entered an incorrect email or password.")</script>';
             if($dbc === false){
 
                 die("ERROR: Could not connect. " 
