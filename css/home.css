@@ -14,11 +14,17 @@
     width: 90%;
 }
 
+@keyframes example {
+    0%      {background-color: #e3b39b;}
+    100%    {background-color: #faf0e6;}
+}
+
 .textcontainer {
     display: flex;
     flex-direction: row;
     width: 75%;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .textbox {
@@ -36,6 +42,10 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 2em;
+    animation: example;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
 }
 .description{
     font-size: larger;

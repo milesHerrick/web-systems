@@ -49,13 +49,22 @@
             </li>
         </ul>
     </div>
-    <div class="input">
-        <form method="get">
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input type="text" id="password" name="password" placeholder="Password">
-            <input type="submit" name="submit" value="Login">
-        </form>
+    <div class="flexbox">
+        <div class="container">
+            <div id=image>
+                <img src="images/loginimage.jpg" alt="The Old Shop">
+            </div>
+            <div class="input">
+                <h1>Sign In</h1>
+                <form method="get">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="text" id="password" name="password" placeholder="Password">
+                    <input type="submit" name="submit" value="Login">
+                </form>
+            </div>
+        </div>
     </div>
+    
 
 
     <div class="footer">

@@ -49,14 +49,22 @@
             </li>
         </ul>
     </div>
-    <div class="input">
-        <form action="" method="post">
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input type="text" id="password" name="password" placeholder="Password">
-            <input type="submit" name="submit">
-        </form>
-    </div>
 
+    <div class="flexbox">
+        <div class="container">
+            <div id=image>
+                <img src="images/signupimage.jpg" alt="The Old Shop">
+            </div>
+            <div class="input">
+                <h1>Sign Up</h1>
+                <form action="" method="post">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="text" id="password" name="password" placeholder="Password">
+                    <input type="submit" name="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <div class="footer">
         <p><b>Copyright &copy; 2021 Hallis Auto Repair</b></p>
